@@ -25,7 +25,7 @@ center = length/2
 filter_low = np.zeros(img_gray.shape)
 
 # ローパスフィルタの設定
-R = 50
+R = 30
 for i in range(0, length):
     for j in range(0, length):
         if(i-center)*(i-center) + (j-center)*(j-center) < R*R:
@@ -77,6 +77,7 @@ plt.plot(hist_lenna)
 plt.xlabel("Pixel value")
 plt.ylabel("Number of pixels")
 plt.xlim(0, 255)
+plt.ylim(0, 800)
 
 plt.figure()
 plt.title("Histgram of Lenna throgh low pass")
@@ -84,5 +85,6 @@ plt.plot(hist_lowlenna)
 plt.xlabel("Pixel value")
 plt.ylabel("Number of pixels")
 plt.xlim(0, 255)
+plt.ylim(0, 800)
 
 plt.show()
